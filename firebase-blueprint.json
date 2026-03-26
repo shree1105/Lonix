@@ -1,0 +1,55 @@
+{
+  "entities": {
+    "UserQuery": {
+      "title": "User Query",
+      "description": "Stores user chat history and queries.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "query": { "type": "string" },
+        "response": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "query", "response", "timestamp"]
+    },
+    "InterestRate": {
+      "title": "Interest Rate",
+      "description": "Cached interest rates for banks.",
+      "type": "object",
+      "properties": {
+        "bankName": { "type": "string" },
+        "homeLoan": { "type": "string" },
+        "personalLoan": { "type": "string" },
+        "carLoan": { "type": "string" },
+        "lastUpdated": { "type": "string", "format": "date-time" }
+      },
+      "required": ["bankName", "homeLoan", "personalLoan", "carLoan", "lastUpdated"]
+    },
+    "Log": {
+      "title": "System Log",
+      "description": "Application logs for debugging and auditing.",
+      "type": "object",
+      "properties": {
+        "level": { "type": "string", "enum": ["info", "warn", "error"] },
+        "message": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "metadata": { "type": "object" }
+      },
+      "required": ["level", "message", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/queries/{queryId}": {
+      "schema": "UserQuery",
+      "description": "Collection of user queries."
+    },
+    "/rates/{rateId}": {
+      "schema": "InterestRate",
+      "description": "Cached interest rates."
+    },
+    "/logs/{logId}": {
+      "schema": "Log",
+      "description": "System logs."
+    }
+  }
+}

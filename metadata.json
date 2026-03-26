@@ -1,0 +1,7 @@
+{
+  "name": "Lonix: India Bank Loan AI",
+  "description": "AI-powered chatbot for real-time Indian bank loan rates, RBI policies, and EMI calculations.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
