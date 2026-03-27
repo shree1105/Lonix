@@ -62,7 +62,7 @@ export async function speakText(text: string, voice: 'Puck' | 'Charon' | 'Kore' 
       // We need to wrap it in a WAV header so the browser can play it.
       const pcmData = Uint8Array.from(atob(base64Audio), c => c.charCodeAt(0));
       const wavData = createWavHeader(pcmData);
-      const blob = new Blob([wavData], { type: 'audio/wav' });
+      const blob = new Blob([new Uint8Array(wavData)], { type: 'audio/wav' });
       return URL.createObjectURL(blob);
     }
     return null;
