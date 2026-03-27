@@ -1,11 +1,11 @@
 {
-  "apiKey": "AIzaSyCsfS64BTNYEue3gCBtSDdTb3MTaRYhrn8",
-  "authDomain": "lonix-ai.firebaseapp.com",
-  "projectId": "lonix-ai",
-  "appId": "1:950307976378:web:98248bf467f6d795667e83",
-  "firestoreDatabaseId": "(default)",
-  "storageBucket": "lonix-ai.firebasestorage.app",
-  "messagingSenderId": "950307976378",
-  "measurementId": "G-F0ZF32QJ5R"
+  "apiKey": "your api key",
+  "authDomain": "your domain",
+  "projectId": "your project id",
+  "appId": "your app id",
+  "firestoreDatabaseId": "your database id",
+  "storageBucket": "",
+  "messagingSenderId": "your sender id",
+  "measurementId": "your measurement id"
 }
 
